@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Quiz de Gênesis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: lightblue;
+            /*background-image: url("jardim_edem.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;*/
+        }
+
+        #quiz-container {
+            background-color: white;
+            border-radius: 10px;
+            background-image: url("jardim_edem.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            width: 90%;
+            height: 100vh;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            
+        }
+
+        .question {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .answers {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .answers li {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            display: none;
+            text-align: center;
+            font-size: 24px;
+            color: green;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000; /* Para garantir que fique acima de outros elementos */
+        }
+
+        /* Media queries para ajustar o layout em dispositivos móveis */
+        @media (max-width: 768px) {
+            #quiz-container {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #quiz-container {
+                width: 80%;
+            }
+
+            button {
+                width: 100%; /* Botões ocupam toda a largura no celular */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <br><br><br><br><br><br><br><br>
+    <h1>Quiz de Gênesis</h1>
+    <br><br>
+    <div id="quiz"></div>
+    <button id="next-btn">Próxima</button>
+    <div id="result"></div>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
