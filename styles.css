@@ -7,7 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-image: url("jardim_edem.jpg");
+    background-image: url("./jardim_edem.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
